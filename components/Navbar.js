@@ -19,7 +19,7 @@ const Navbar = () => {
 
         <div style={{ display: 'flex', gap: '1em' }}>
           <Link href="/shorten"><button>Try Now</button></Link>
-          <Link href="/github"><button>Github</button></Link>
+          
         </div>
       </div>
     </nav>

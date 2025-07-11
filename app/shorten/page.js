@@ -54,7 +54,7 @@ fetch("/api/generate", requestOptions)
         </pre>
         )}
     </div>
-   
+  
   )
 }
 
