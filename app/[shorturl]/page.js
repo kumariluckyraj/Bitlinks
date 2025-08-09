@@ -14,7 +14,11 @@ export default async function Page({ params }) {
   if (doc) {
     redirect(doc.url); // Redirect to original URL
   } else {
-    redirect(`${process.env.NEXT_PUBLIC_HOST}`); // Redirect to homepage or fallback
+    const baseUrl =
+  process.env.NEXT_PUBLIC_HOST || "http://localhost:3000";
+
+redirect(baseUrl);
+ // Redirect to homepage or fallback
   }
 
   // Unreachable code after redirect (this line will never run)

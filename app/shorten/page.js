@@ -27,7 +27,14 @@ const requestOptions = {
 fetch("/api/generate", requestOptions)
   .then((response) => response.json())
   .then((result) =>{
-    setGenerated(`${process.env.NEXT_PUBLIC_HOST}/${shorturl}`)
+   const baseUrl =
+  process.env.NEXT_PUBLIC_HOST ||
+  (typeof window !== "undefined"
+    ? window.location.origin
+    : "http://localhost:3000");
+
+setGenerated(`${baseUrl}/${shorturl}`);
+
     seturl("")
     setshorturl("")
     
